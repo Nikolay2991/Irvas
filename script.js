@@ -15676,7 +15676,7 @@ const timer = (id, deadline) => {
     function updateClock() {
       const t = getTimeRemaining(endtime); // Если время равно 0 то выставляем все значерия в '00' и останавливаем таймер
 
-      if (t.total === 0) {
+      if (t.total <= 0) {
         days.textContent = '00';
         hours.textContent = '00';
         minutes.textContent = '00';
